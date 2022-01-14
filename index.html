@@ -26,6 +26,16 @@
 
 
     <style>
+        html {
+            cursor: url(./assets/images/icons/cursor.png), auto;
+
+        }
+
+        a {
+            cursor: url(./assets/images/icons/hand-pointer.png), auto;
+
+        }
+
         #cursor {
             position: fixed;
             z-index: 99;
@@ -37,6 +47,9 @@
         }
 
         @media (hover: hover) and (pointer: fine) {
+
+
+
             .cursor__circle {
                 width: 64px;
                 height: 64px;
@@ -54,8 +67,8 @@
             #cursor.arrow .cursor__circle {
                 width: 128px;
                 height: 128px;
-                background-color: #073099;
-                border-color: #073099;
+                background-color: #ffffff41;
+                border-color: #ffffffa2;
             }
 
             #cursor.arrow::after {
@@ -65,7 +78,7 @@
                 top: -50%;
                 width: 100%;
                 height: 100%;
-                background-image: url('https://svgshare.com/i/MzQ.svg');
+                /* background-image: url('https://svgshare.com/i/MzQ.svg'); */
                 background-repeat: no-repeat;
                 background-position: center;
             }
@@ -92,83 +105,13 @@
     </div>
 
 
-    <script>
-        const cursor = document.querySelector('#cursor');
-        const cursorCircle = cursor.querySelector('.cursor__circle');
 
-        const mouse = { x: -100, y: -100 }; // mouse pointer's coordinates
-        const pos = { x: 0, y: 0 }; // cursor's coordinates
-        const speed = 0.1; // between 0 and 1
-
-        const updateCoordinates = e => {
-            mouse.x = e.clientX;
-            mouse.y = e.clientY;
-        }
-
-        window.addEventListener('mousemove', updateCoordinates);
-
-
-        function getAngle(diffX, diffY) {
-            return Math.atan2(diffY, diffX) * 180 / Math.PI;
-        }
-
-        function getSqueeze(diffX, diffY) {
-            const distance = Math.sqrt(
-                Math.pow(diffX, 2) + Math.pow(diffY, 2)
-            );
-            const maxSqueeze = 0.15;
-            const accelerator = 1500;
-            return Math.min(distance / accelerator, maxSqueeze);
-        }
-
-
-        const updateCursor = () => {
-            const diffX = Math.round(mouse.x - pos.x);
-            const diffY = Math.round(mouse.y - pos.y);
-
-            pos.x += diffX * speed;
-            pos.y += diffY * speed;
-
-            const angle = getAngle(diffX, diffY);
-            const squeeze = getSqueeze(diffX, diffY);
-
-            const scale = 'scale(' + (1 + squeeze) + ', ' + (1 - squeeze) + ')';
-            const rotate = 'rotate(' + angle + 'deg)';
-            const translate = 'translate3d(' + pos.x + 'px ,' + pos.y + 'px, 0)';
-
-            cursor.style.transform = translate;
-            cursorCircle.style.transform = rotate + scale;
-        };
-
-        function loop() {
-            updateCursor();
-            requestAnimationFrame(loop);
-        }
-
-        requestAnimationFrame(loop);
-
-
-
-        const cursorModifiers = document.querySelectorAll('[cursor-class]');
-
-        cursorModifiers.forEach(curosrModifier => {
-            curosrModifier.addEventListener('mouseenter', function () {
-                const className = this.getAttribute('cursor-class');
-                cursor.classList.add(className);
-            });
-
-            curosrModifier.addEventListener('mouseleave', function () {
-                const className = this.getAttribute('cursor-class');
-                cursor.classList.remove(className);
-            });
-        });
-    </script>
 
 
 
 
     <!-- Start Header -->
-    <header class="rn-header haeder-default black-logo-version header--fixed header--sticky">
+    <header class="rn-header haeder-default black-logo-version header--fixed header--sticky" cursor-class="arrow">
         <div class="header-wrapper rn-popup-mobile-menu m--0 row align-items-center">
             <!-- Start Header Left -->
             <div class="col-lg-2 col-6">
@@ -219,6 +162,7 @@
         </div>
     </header>
     <!-- End Header Area -->
+
     <!-- Start Popup Mobile Menu  -->
     <div class="popup-mobile-menu">
         <div class="inner">
@@ -323,7 +267,7 @@
                                     </h1>
 
                                     <div>
-                                        <p class="description" >
+                                        <p class="description">
                                             Experienced Software Engineer with a passion for developing innovative
                                             programs. Skilled in conceptualizing, designing,
                                             developing, and deploying software containing logical and mathematical
@@ -4276,6 +4220,80 @@
 
         );
     </script>
+
+    <script>
+        const cursor = document.querySelector('#cursor');
+        const cursorCircle = cursor.querySelector('.cursor__circle');
+
+        const mouse = { x: -100, y: -100 }; // mouse pointer's coordinates
+        const pos = { x: 0, y: 0 }; // cursor's coordinates
+        const speed = 0.1; // between 0 and 1
+
+        const updateCoordinates = e => {
+            mouse.x = e.clientX;
+            mouse.y = e.clientY;
+        }
+
+        window.addEventListener('mousemove', updateCoordinates);
+
+
+        function getAngle(diffX, diffY) {
+            return Math.atan2(diffY, diffX) * 180 / Math.PI;
+        }
+
+        function getSqueeze(diffX, diffY) {
+            const distance = Math.sqrt(
+                Math.pow(diffX, 2) + Math.pow(diffY, 2)
+            );
+            const maxSqueeze = 0.15;
+            const accelerator = 1500;
+            return Math.min(distance / accelerator, maxSqueeze);
+        }
+
+
+        const updateCursor = () => {
+            const diffX = Math.round(mouse.x - pos.x);
+            const diffY = Math.round(mouse.y - pos.y);
+
+            pos.x += diffX * speed;
+            pos.y += diffY * speed;
+
+            const angle = getAngle(diffX, diffY);
+            const squeeze = getSqueeze(diffX, diffY);
+
+            const scale = 'scale(' + (1 + squeeze) + ', ' + (1 - squeeze) + ')';
+            const rotate = 'rotate(' + angle + 'deg)';
+            const translate = 'translate3d(' + pos.x + 'px ,' + pos.y + 'px, 0)';
+
+            cursor.style.transform = translate;
+            cursorCircle.style.transform = rotate + scale;
+        };
+
+        function loop() {
+            updateCursor();
+            requestAnimationFrame(loop);
+        }
+
+        requestAnimationFrame(loop);
+
+
+
+        const cursorModifiers = document.querySelectorAll('[cursor-class]');
+
+        cursorModifiers.forEach(curosrModifier => {
+            curosrModifier.addEventListener('mouseenter', function () {
+                const className = this.getAttribute('cursor-class');
+                cursor.classList.add(className);
+            });
+
+            curosrModifier.addEventListener('mouseleave', function () {
+                const className = this.getAttribute('cursor-class');
+                cursor.classList.remove(className);
+            });
+        });
+    </script>
+
+
 
 
 </body>
