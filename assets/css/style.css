@@ -38,6 +38,11 @@
 /* Default  */
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+/* custom */
+@import url("https://fonts.googleapis.com/css2?family=Martel:wght@200;300;400;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@400;700&display=swap");
+
 :root {
   --color-primary: #ff014f;
   --color-secondary: #f4f5f6;
@@ -93,8 +98,13 @@
   --s-extra-bold: 800;
   --s-black: 900;
   --transition: 0.4s;
-  --font-primary: "Poppins", sans-serif;
-  --font-secondary: "Montserrat", sans-serif;
+
+  /* --font-primary: "Poppins", sans-serif; */
+  /* --font-secondary: "Montserrat", sans-serif; */
+  --font-primary: "Martel", serif;
+  --font-secondary: "PT Serif", serif;
+  --font-stylish: "Cabin Sketch", cursive;
+
   --font-size-b1: 18px;
   --font-size-b2: 22px;
   --font-size-b3: 14px;
@@ -172,8 +182,8 @@ hr {
   margin-bottom: 20px;
 }
 
-h1,
-h2,
+/* h1, */
+/* h2, */
 h3,
 h4,
 h5,
@@ -186,6 +196,14 @@ h6,
 .h6 {
   word-break: break-word;
   font-family: var(--font-secondary);
+  line-height: 1.4074;
+  color: var(--color-heading);
+}
+
+h1,
+h2 {
+  word-break: break-word;
+  font-family: var(--font-stylish) !important;
   line-height: 1.4074;
   color: var(--color-heading);
 }
