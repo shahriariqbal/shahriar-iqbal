@@ -10713,14 +10713,15 @@ body.template-color-1 {
 }
 .logo a img {
   transition: 0.3s;
-  width: 70px;
-  height: 70px;
+  /* width: 70px; */
+  height: 40px;
 }
 @media only screen and (max-width: 767px) {
   .logo a img {
     /* max-height: 54px; */
-    height: 54px;
-    width: 54px;
+    /* height: 54px; */
+    /* width: 54px; */
+    height: 35px;
   }
 }
 
@@ -14322,7 +14323,7 @@ div#featured-project-carousel {
 }
 .experience-style-two .experience-center .disc {
   /* font-size: 16px; */
-  font-size: 14px;
+  font-size: 15px;
   color: var(--color-body);
 }
 .experience-style-two .experience-right {
