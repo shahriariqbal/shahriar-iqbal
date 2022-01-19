@@ -13942,7 +13942,8 @@ div#featured-project-carousel {
   position: relative;
   z-index: 2;
   margin-top: 50px;
-  padding: 45px 40px;
+  /* padding: 45px 40px; */
+  padding: 25px 40px;
   border-radius: 6px;
   background: var(--background-color-1);
   box-shadow: var(--shadow-1);
@@ -14037,9 +14038,9 @@ div#featured-project-carousel {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-bottom: 1px solid #1a1d23;
-  padding-bottom: 20px;
-  margin-bottom: 20px;
+  /* border-bottom: 1px solid #1a1d23; */
+  /* padding-bottom: 20px; */
+  /* margin-bottom: 20px; */
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
   .personal-experience-inner
