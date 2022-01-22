@@ -108,14 +108,6 @@
   color: var(--color-lightn);
 }
 
-.project-tech-title {
-  font-size: 20px;
-  color: #c4cfde;
-  font-weight: 400;
-  margin-bottom: 7px;
-  line-height: 1.4;
-}
-
 .carousel-control-prev {
   left: -40px;
 }
@@ -151,11 +143,33 @@
   height: 233px !important;
 }
 
-/* project start */
+/****************************project start************************************/
 .rn-portfolio {
   width: 100%;
 }
-/* project end */
+
+.project-tech-title {
+  font-size: 20px;
+  color: #c4cfde;
+  font-weight: 400;
+  margin-bottom: 7px;
+  line-height: 1.4;
+}
+
+.nav-item .nav-link img {
+  width: 28px;
+}
+
+.project-tech-modal {
+  padding: 4px 8px !important;
+  margin: 2px !important;
+}
+
+.project-tech-modal img {
+  height: 21px;
+  margin-right: 4px;
+}
+/**************************** project end ****************************/
 
 /* what I do start */
 .icon img {
