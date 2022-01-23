@@ -1,3 +1,7 @@
+.font-size-17 {
+  font-size: 17px !important;
+}
+
 /********************** custom cursor with following trail--start **********************/
 
 #cursor {
@@ -168,6 +172,20 @@
 .project-tech-modal img {
   height: 21px;
   margin-right: 4px;
+}
+
+.project-link {
+  border-top: 1px solid rgb(46, 45, 45);
+  padding-top: 20px;
+}
+
+.project-link .button-group a {
+  margin-left: 0px;
+  /* padding: 10px 12px; */
+}
+
+.project-link .button-group a img {
+  width: 24px;
 }
 /**************************** project end ****************************/
 
