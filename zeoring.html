@@ -173,8 +173,16 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <!-- <a style="border: 1px solid #ff014f;" class=" mb-3 rn-btn border-button btn-small" href="#">Button Small <i class="feather-loader"></i></a> -->
-                        <img style="width: 100%; border-radius: 10px;" src="./assets/images/projects/zeroing/hw2.jpg"
+                        <img style="width: 100%; border-radius: 10px;" src="./assets/images/projects/zeroing/poster.png"
                             alt="">
+                        <p class="text-justify font-size-17 mt-4">
+                            Developed a weapon zeroing system for the Bangladesh Army. In this system, an android
+                            application can process the target (shooting paper) image and generate the correction value.
+                            Based on that
+                            correction value the application will command the machine to zero the weapon automatically.
+                            A web application is also developed where the sub-unit commander can monitor the firing
+                            results and able to provide necessary corrections for specific firers.
+                        </p>
                     </div>
                 </div>
             </div>
@@ -223,66 +231,101 @@
             <div class="container">
                 <h2>Technical Sheet</h2>
                 <p class="text-justify font-size-17">
-                    Developed a weapon zeroing system for the Bangladesh Army. An android application was developed
-                    which can process the target (shooting paper) image and generate the correction value. Based on that
-                    correction value the application will command the machine to zero the weapon automatically. At the
-                    same time, the sub-unit commander can see the progress of firing of his soldiers by visiting the
-                    website.
+                    One of the most important aspects of basic soldering is weapon efficiency and its analysis. Weapon
+                    zeroing and its analysis is two major domains that works as a benchmark for achieving the goal of
+                    weapon training. Zeroing (or sighting in) a rifle is the process of aligning the sights on the
+                    weapon with the rifle so soldier can accurately aim at the target from a set distance.
                 </p>
+
+                <p class="text-justify font-size-17">
+                    Weapon Zeroing system is a software based zeroing tool which
+                    is designed for basic weapon of
+                    Bangladesh Army (Assault Rifle BD 08 or similar weapon). In this system the required correction is
+                    calculated by the algorithm which follow the zeroing technique
+                    prescribed by School of Infantry and tactics. In the range analysis
+                    part the basic fault of a firer is identified by analyzing the pattern
+                    of the impacts in the target. At the same time the sub-unit
+                    commander can see the progress of fire of his soldiers by
+                    visiting the website. For preparing the zeroing tool three stepper
+                    motors are used which can be utilized in any weapon of same
+                    specification. For the identification of the firing impact computer
+                    vision is used.
+                </p>
+
 
 
 
                 <div class="row">
                     <!-- Start Single Video Button  -->
-                    <div class="col-lg-4 col-md-6 col-12">
+                    <div class="col-lg-8 col-md-6 col-12">
 
-                        <p>
-                            Developed an algorithm that follows the zeroing technique and this algorithm was used for
-                            calculating the required correction.
-
-                            An image processing system was implemented where machine learning was applied to get
-                            accurate and precise values from the target image. Python was used for creating the image
-                            processing api.
+                        <p class="text-justify font-size-17">
+                            The bullet pierced target’s image will
+                            be collected using camera which will be processed using
+                            the mobile application incorporated in the system.
+                            The application will be mainly used for
+                            weapon correction value calculation. The firer logging into
+                            their profile will enter the weapon correction section. He will
+                            take photo of the target. The application will detect the holes
+                            pierced in the target by the bullets.
+                            <img style="width: 60%; border-radius: 7px; margin: 20px 0px 0px 20px;"
+                                src="./assets/images/projects/zeroing/target.jpg" align="right" alt="">
+                            OpenCV framework is
+                            used to detect the holes in the target. It will calculate the MPI
+                            value of the weapon. When the firer click for zero command,
+                            a Bluetooth interface sends the zeroing value directly to the
+                            arduino for zeroing the weapon.
+                            The MPI value will be sent to the database at the same time,
+                            where at the back end the efficiency analysis of the firer is
+                            done. Based on the error generated, the quality of firer is
+                            determined and the firer’s error type is generated.
+                            The android application will use the same database used for
+                            web application . Records of all
+                            user information is stored in a mysql database which shares
+                            connection with all the devices through wifi/cable network.
                         </p>
+
+
 
                     </div>
                     <!-- End Single Video Button  -->
 
                     <!-- Start Single Video Button  -->
-                    <div class="col-lg-4 col-md-6 col-12">
+                    <!-- <div class="col-lg-4 col-md-6 col-12">
 
-                        
-                        <img style="width: 100%;  padding: 5px 15px 5px 15px; " src="assets/images/projects/zeroing/app1.jpg"
-                        >
-                    </div>
-                    <!-- End Single Video Button  -->
+
+
+
+                        <img style="width: 100%;  padding: 5px 15px 5px 15px; "
+                            src="assets/images/projects/zeroing/app1.jpg">
+                    </div> -->
 
                     <!-- Start Single Video Button  -->
                     <div class="col-lg-4 col-md-6 col-12 mt_sm--30">
                         <div id="carouselZeroingAppControls" class="carousel slide mx-3" data-ride="carousel">
                             <div class="carousel-inner ">
-                                <!-- <div class="carousel-item inner active">
-                                    <img class="d-block w-100" src="assets/images/projects/zeroing/app1.jpg"
-                                        alt="First slide">
-                                </div> -->
                                 <div class="carousel-item inner active">
-                                    <img class="d-block w-100" src="assets/images/projects/zeroing/app2.jpg"
-                                        alt="Second slide">
+                                    <img class="d-block w-100" style="border-radius: 7px;"
+                                        src="assets/images/projects/zeroing/app1.jpg" alt="First slide">
+                                </div>
+                                <div class="carousel-item inner">
+                                    <img class="d-block w-100" style="border-radius: 7px;"
+                                        src="assets/images/projects/zeroing/app2.jpg" alt="Second slide">
                                 </div>
 
                                 <div class="carousel-item">
-                                    <img class="d-block w-100" src="assets/images/projects/zeroing/app3.jpg"
-                                        alt="Second slide">
+                                    <img class="d-block w-100" style="border-radius: 7px;"
+                                        src="assets/images/projects/zeroing/app3.jpg" alt="Second slide">
                                 </div>
 
                                 <div class="carousel-item">
-                                    <img class="d-block w-100" src="assets/images/projects/zeroing/app4.jpg"
-                                        alt="Second slide">
+                                    <img class="d-block w-100" style="border-radius: 7px;"
+                                        src="assets/images/projects/zeroing/app4.jpg" alt="Second slide">
                                 </div>
 
                                 <div class="carousel-item">
-                                    <img class="d-block w-100" src="assets/images/projects/zeroing/app5.jpg"
-                                        alt="Second slide">
+                                    <img class="d-block w-100" style="border-radius: 7px;"
+                                        src="assets/images/projects/zeroing/app5.jpg" alt="Second slide">
                                 </div>
 
                             </div>
@@ -302,6 +345,125 @@
                         </div>
                     </div>
                     <!-- End Single Video Button  -->
+
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="rn-video-popup-area rn-section-gapBottom bg_color--1 line-separator">
+            <div class="container">
+
+
+
+
+
+
+                <div class="row">
+                    <div class="col-md-6 mb-4">
+                        <p class="text-justify font-size-17">
+                            A metal framework is designed for the hardware section
+                            which will contain the weapon where it will be zeroed. For
+                            zeroing purpose, a linear actuator and a gear motor will be
+                            attached in the framework. The linear correction of the weapon
+                            will be done by the linear actuator. Based on the values
+                            of the correction sent by mobile application using Bluetooth
+                            interface, the linear actuator will move forward and backward.
+                            Linear actuator movement is controlled on basis of time. Based
+                            on the calculation of linear correction, its movement zero the
+                            weapon linearly.
+
+                            The front side tip is corrected by gear motor. However, there
+                            arises the problem of number of rotations calculation since in
+                            gear motor the number of rotation calculation is not possible.
+                            To solve this problem, it is interfaced to rotation sensors
+                            through pinions. The pinions are interfaced with rotary encoder.
+                            It controls the number of rotations of the motor through
+                            the pinions as per command from the mobile application
+                            through arduino.
+
+                        </p>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="thumbnail position-relative">
+                            <img class="w-100" src="assets/images/projects/zeroing/thumb.jpg" alt="About Images">
+
+                            <a id="play-video-2" class="video-play-button" href="#">
+                                <span></span>
+                            </a>
+                            <div id="video-overlay-2" class="video-overlay">
+                                <a class="video-overlay-close">×</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Start Single Video Button  -->
+                    <div class="col-lg-6 col-md-6 col-12">
+
+                        <img src="assets/images/projects/zeroing/hw2.jpg" alt=""
+                            style="width: 100%; height: auto; border-radius: 5px; margin-bottom: 15px;">
+
+                        <img src="assets/images/projects/zeroing/front.jpg" alt=""
+                            style="width: 100%; height: auto; border-radius: 5px;">
+
+
+                    </div>
+                    <!-- End Single Video Button  -->
+
+                    <!-- Start Single Video Button  -->
+                    <div class="col-lg-6 col-md-6 col-12">
+
+                        <img src="assets/images/projects/zeroing/hw1.jpg" alt=""
+                            style="width: 100%; height: auto; border-radius: 5px;">
+
+                    </div>
+                    <!-- End Single Video Button  -->
+
+
+                </div>
+
+                <div class="row my-5">
+                    <!-- Start Single Video Button  -->
+                    <div class="col-lg-6 col-md-6 col-12 mt_sm--30">
+                        <div class="thumbnail position-relative">
+                            <img class="w-100" src="assets/images/projects/zeroing/zeroing-thumb.jpg"
+                                alt="About Images">
+
+                            <a id="play-video" class="video-play-button" href="#">
+                                <span></span>
+                            </a>
+                            <div id="video-overlay" class="video-overlay">
+                                <a class="video-overlay-close">×</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Single Video Button  -->
+                    <!-- Start Single Video Button  -->
+                    <div class="col-lg-6 col-md-6 col-12">
+
+                        <p class="text-justify font-size-17">
+                            <!-- The exact value of rotation for motor and
+                            increment/decrement length for linear actuator must be sent
+                            from mobile application to arduino.
+                            With this purpose in mind, the developers of the system have
+                            used bluetooth interface. -->
+
+                            The mobile application detects bluetooth interface connected
+                            via bluetooth. It pairs with the device. The processed
+                            data from the target image will fetch the zeroing value
+                            for motor rotation and linear actuator displacement passing
+                            through algorithm for finding zeroing value. The motor rotation
+                            value and the linear actuator displacement value through
+                            the bluetooth interface finally to the arduino will be sent to
+                            the gear motor and linear actuator which will zero the front
+                            size and bring linear correction in the weapon respectively.
+                        </p>
+
+
+                    </div>
+                    <!-- End Single Video Button  -->
+
+
 
                 </div>
             </div>
@@ -356,8 +518,18 @@
                     <div class="col-lg-6 col-md-6 col-12">
 
                         <p>
-                            Built the web application using PHP, JavaScript, MySql, HTML and CSS. The android
-                            application was built with Java.
+
+
+                            The web application is built using HTML, CSS, PHP, Javascript and MySQL has been used to
+                            implement the
+                            database of the system. The user need to log in and complete
+                            their profile using this web application. Besides, the firer can
+                            observe the record of their performance in firing logging in
+                            his account. The sub unit commander will have the control to
+                            observe the overall performance of all the soldiers under
+                            him. The complete web system will be under control of the
+                            admin where he can create, update, delete, lock and unlock
+                            user.
                         </p>
 
                     </div>
@@ -367,62 +539,16 @@
             </div>
         </div>
 
+
         <div class="rn-video-popup-area rn-section-gapBottom bg_color--1 line-separator">
             <div class="container">
-                <p class="text-justify font-size-17">
-                    Built the zeroing machine using three stepper motors, Arduino Mega, etc.
-                </p>
-
-
-
-                <div class="row mb-5">
-                    <!-- Start Single Video Button  -->
-                    <div class="col-lg-6 col-md-6 col-12">
-
-                        <p>
-                            Built the zeroing machine using three stepper motors, Arduino Mega, etc.
-
-                        </p>
-
-                    </div>
-                    <!-- End Single Video Button  -->
-
-                    <!-- Start Single Video Button  -->
-                    <div class="col-lg-6 col-md-6 col-12 mt_sm--30">
-                        <div class="thumbnail position-relative">
-                            <img class="w-100" src="assets/images/portfolio/portfolio-10.jpg" alt="About Images">
-
-                            <a id="play-video" class="video-play-button" href="#">
-                                <span></span>
-                            </a>
-                            <div id="video-overlay" class="video-overlay">
-                                <a class="video-overlay-close">×</a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- End Single Video Button  -->
-
-                </div>
-
                 <div class="row">
-                    <!-- Start Single Video Button  -->
-                    <div class="col-lg-6 col-md-6 col-12">
-
-                        <img src="assets/images/projects/zeroing/hw2.jpg" alt=""
-                                    style="width: 100%; height: auto; border-radius: 5px;">
-
+                    <div class="col-md-3"></div>
+                    <div class="col-md-6">
+                        <img src="./assets/images/projects/zeroing/flow.png" alt=""
+                            style="width: 100%; border-radius: 10px;">
                     </div>
-                    <!-- End Single Video Button  -->
-
-                    <!-- Start Single Video Button  -->
-                    <div class="col-lg-6 col-md-6 col-12">
-
-                        <img src="assets/images/projects/zeroing/hw2.jpg" alt=""
-                                    style="width: 100%; height: auto; border-radius: 5px;">
-
-                    </div>
-                    <!-- End Single Video Button  -->
-
+                    <div class="col-md-3"></div>
                 </div>
             </div>
         </div>
@@ -446,7 +572,7 @@
 
         <!-- Rn footer area Start -->
         <div id="footer" class="rn-footer-area footer-style-2 rn-section-gapTop ">
-            
+
             <div class="copyright text-center ptb--40 section-separator">
                 <p class="description">© 2021. All rights reserved by <a target="_blank"
                         href="https://themeforest.net/user/rainbow-themes/portfolio">Rainbow-Themes.</a></p>

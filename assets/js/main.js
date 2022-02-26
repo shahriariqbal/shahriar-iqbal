@@ -332,7 +332,13 @@
             $('#play-video').on('click', function (e) {
                 e.preventDefault();
                 $('#video-overlay').addClass('open');
-                $("#video-overlay").append('<iframe width="80%" height="80%" src="https://www.youtube.com/embed/7e90gBu4pas" frameborder="0" allowfullscreen></iframe>');
+                $("#video-overlay").append('<iframe width="80%" height="80%" src="https://www.youtube.com/embed/GHVe2imcb0U" frameborder="0" allowfullscreen></iframe>');
+            });
+
+            $('#play-video-2').on('click', function (e) {
+                e.preventDefault();
+                $('#video-overlay-2').addClass('open');
+                $("#video-overlay-2").append('<iframe width="80%" height="80%" src="https://www.youtube.com/embed/3LiOYOt_ZIM" frameborder="0" allowfullscreen></iframe>');
             });
 
             $('.video-overlay, .video-overlay-close').on('click', function (e) {
