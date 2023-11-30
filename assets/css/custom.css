@@ -73,7 +73,7 @@
 .disc {
   max-width: 810px;
   margin: 0px;
-  padding: 0px;
+  padding: 0px 0px 10px 0px;
   text-align: justify;
 }
 

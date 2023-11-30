@@ -42,6 +42,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Martel:wght@200;300;400;600;700;800;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@400;700&display=swap");
+  @import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 :root {
   --color-primary: #ff014f;
@@ -101,8 +102,10 @@
 
   /* --font-primary: "Poppins", sans-serif; */
   /* --font-secondary: "Montserrat", sans-serif; */
-  --font-primary: "Martel", serif;
-  --font-secondary: "PT Serif", serif;
+  /* --font-primary: "Martel", serif; */
+  --font-primary: "Space Mono", serif;
+  /* --font-secondary: "PT Serif", serif; */
+  --font-secondary: "Space Mono", serif;
   --font-stylish: "Cabin Sketch", cursive;
 
   --font-size-b1: 18px;
